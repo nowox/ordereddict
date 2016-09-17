@@ -414,10 +414,10 @@ dump_ordereddict_head(register PyOrderedDictObject *mp)
         printf("sorteddict");
     else
         printf("ordereddict");
-    printf(": fill " SPR ", ", mp->od_fill);
-    printf("used " SPR ", ", mp->ma_used);
-    printf("mask " SPR ", ", mp->ma_mask);
-    printf("mask " SPR ", ", mp->ma_mask);
+    printf(": fill " SPR ", ", (long int)mp->od_fill);
+    printf("used " SPR ", ", (long int)mp->ma_used);
+    printf("mask " SPR ", ", (long int)mp->ma_mask);
+    printf("mask " SPR ", ", (long int)mp->ma_mask);
     printf("\nbits: ");
     if (KVIO(mp))
         printf("kvio ");
@@ -443,7 +443,7 @@ dump_otablep(register PyOrderedDictObject *mp)
     PyOrderedDictEntry **p;
     printf("mp %p\n", mp);
     for (index = 0, p = mp->od_otablep; index < mp->ma_used; index++, p++) {
-        printf("index " SPR " %p %p\n", index, p, *p);
+        printf("index " SPR " %p %p\n", (long int)index, p, *p);
     }
 }
 
@@ -2881,7 +2881,7 @@ dict_setkeys(register PyOrderedDictObject *mp, PyObject *keys)
         if (item == NULL || item->me_value == NULL) {
             PyErr_Format(PyExc_KeyError,
                          "ordereddict setkeys unknown key at pos " SPR,
-                         i);
+                         (long int)i);
             break;
         }
         /* PyObject_Print((PyObject *)item->me_key, stdout, 0);*/
@@ -2890,7 +2890,7 @@ dict_setkeys(register PyOrderedDictObject *mp, PyObject *keys)
             if (newtable[oldindex] == item) {
                 PyErr_Format(PyExc_KeyError,
                              "ordereddict setkeys same key at pos " SPR "and " SPR,
-                             oldindex, i);
+                             (long int)oldindex, (long int)i);
                 break;
             }
         }
