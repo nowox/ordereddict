@@ -140,6 +140,14 @@ struct _sorteddictobject {
 
 PyAPI_DATA(PyTypeObject) PyOrderedDict_Type;
 PyAPI_DATA(PyTypeObject) PySortedDict_Type;
+#if PY_VERSION_HEX >= 0x02070000
+PyAPI_DATA(PyTypeObject) PyOrderedDictIterKey_Type;
+PyAPI_DATA(PyTypeObject) PyOrderedDictIterValue_Type;
+PyAPI_DATA(PyTypeObject) PyOrderedDictIterItem_Type;
+#endif
+PyAPI_DATA(PyTypeObject) PyOrderedDictKeys_Type;
+PyAPI_DATA(PyTypeObject) PyOrderedDictItems_Type;
+PyAPI_DATA(PyTypeObject) PyOrderedDictValues_Type;
 
 #if PY_VERSION_HEX >= 0x02080000
   /* AvdN: this might need reviewing for > 2.7 */
@@ -170,6 +178,8 @@ PyAPI_FUNC(Py_ssize_t) PyOrderedDict_Size(PyObject *mp);
 PyAPI_FUNC(PyObject *) PyOrderedDict_Copy(PyObject *mp);
 PyAPI_FUNC(int) PyOrderedDict_Contains(PyObject *mp, PyObject *key);
 PyAPI_FUNC(int) _PyOrderedDict_Contains(PyObject *mp, PyObject *key, long hash);
+PyAPI_FUNC(PyObject *) _PyOrderedDict_NewPresized(Py_ssize_t minused);
+PyAPI_FUNC(void) _PyOrderedDict_MaybeUntrack(PyObject *mp);
 
 /* PyOrderedDict_Update(mp, other) is equivalent to PyOrderedDict_Merge(mp, other, 1). */
 PyAPI_FUNC(int) PyOrderedDict_Update(PyObject *mp, PyObject *other);
