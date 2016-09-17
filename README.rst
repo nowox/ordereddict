@@ -36,6 +36,7 @@ This module has been tested under:
 OS             compiler                  Python
 Linux Mint 17  gcc 4.8.2                 2.7.10
 Linux Mint 17  gcc 4.8.2                 2.6.9
+Cygwin 2.6.0   gcc 5.4.0                 2.7.10
 Windows XP-64  Visual Studio 2008        2.7.10-32
 Windows XP-64  Visual Studio 2008        2.7.10-64
 Windows XP-64  Visual Studio 2010        2.6.9-32
@@ -45,8 +46,8 @@ Windows XP-64  Visual Studio 2010        2.6.9-64
 Older versions of this module has been tested under
 and I expect those to still work:
 
-============  ========================= ======
-OS            compiler                  Python
+============   ========================= ======
+OS             compiler                  Python
 Ubuntu 12.04   gcc 4.7.2                 2.7.6
 Ubuntu 12.04   gcc 4.7.2                 2.6.8
 Ubuntu  8.04   gcc 4.2.4                 2.7.6
@@ -56,16 +57,16 @@ Windows 7 64   Windows SDK for Win7 SP1  2.7.6
 Ubuntu 12.04   gcc 4.6.3                 2.7.3
 Ubuntu  8.04   gcc 4.2.4                 2.6.4
 Ubuntu  8.04   gcc 4.2.4                 2.5.2
-Ubuntu  8.10  gcc 4.3.2                 2.5.4
-Ubuntu  8.10  gcc 4.3.2                 2.4.6
-Ubuntu  7.04  gcc 4.1.2                 2.5.1
-Ubuntu  7.04  gcc 4.1.2                 2.4.4
-Ubuntu  6.06  gcc                       2.5.1
-Windows XP    Visual Studio 2003        2.5.1
+Ubuntu  8.10   gcc 4.3.2                 2.5.4
+Ubuntu  8.10   gcc 4.3.2                 2.4.6
+Ubuntu  7.04   gcc 4.1.2                 2.5.1
+Ubuntu  7.04   gcc 4.1.2                 2.4.4
+Ubuntu  6.06   gcc                       2.5.1
+Windows XP     Visual Studio 2003        2.5.1
 Windows XP     Visual C++ 2008 Express   2.6.5
 Windows        MingGW 4.7.0              2.7.3
 Solaris 10     GCC 4.4.x                 2.7.3
-============  ========================= ======
+============   ========================= ======
 
 Version 0.4.1 was tested and found working on SuSE Linux Enterprise Server
 (GCC 4.1.0 and Intel C/C++ 10.1) by Stuart Stock.
