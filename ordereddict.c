@@ -212,7 +212,7 @@ PyOrderedDict_New(void)
 #ifdef SHOW_ALLOC_COUNT
         count_alloc++;
 #endif
-    } 
+    }
     mp->ma_lookup = lookdict_string;
 #ifdef SHOW_CONVERSION_COUNTS
     ++created;
@@ -238,7 +238,7 @@ PySortedDict_New(void)
 #ifdef SHOW_CONVERSION_COUNTS
     ++created;
 #endif
-    PyObject_GC_Track(mp);   
+    PyObject_GC_Track(mp);
     return (PyObject *)mp;
 }
 
@@ -583,7 +583,7 @@ static int
 insertdict(register PyOrderedDictObject *mp, PyObject *key, long hash,
            PyObject *value, Py_ssize_t index)
 {
-    register PyOrderedDictEntry *ep; 
+    register PyOrderedDictEntry *ep;
 
     assert(mp->ma_lookup != NULL);
     ep = mp->ma_lookup(mp, key, hash);
@@ -889,7 +889,7 @@ PyOrderedDict_GetItem(PyObject *op, PyObject *key)
         }
     }
 
-    /* We can arrive here with a NULL tstate during initialization: try 
+    /* We can arrive here with a NULL tstate during initialization: try
        running "python -Wi" for an example related to string interning.
        Let's just hope that no exception occurs then... This must be
        _PyThreadState_Current and not PyThreadState_GET() because in debug
@@ -1861,7 +1861,7 @@ dict_fromkeys(PyObject *cls, PyObject *args)
             Py_ssize_t pos = 0;
             PyObject *key;
             long hash;
-    
+
             if (dictresize(mp, PySet_GET_SIZE(seq))) {
     	    Py_DECREF(d);
                 return NULL;
@@ -3212,7 +3212,7 @@ static PyMethodDef ordereddict_methods[] = {
     {"viewitems",       (PyCFunction)dictitems_new,     METH_NOARGS,
      viewitems__doc__},
     {"viewvalues",      (PyCFunction)dictvalues_new,    METH_NOARGS,
-     viewvalues__doc__}, 
+     viewvalues__doc__},
 #endif
     {
         "update",	(PyCFunction)dict_update,	METH_VARARGS | METH_KEYWORDS,
@@ -3473,7 +3473,7 @@ PyDoc_STRVAR(ordereddict_doc,
             );
 
 PyTypeObject PyOrderedDict_Type = {
-    PyVarObject_HEAD_INIT(NULL, 0)    
+    PyVarObject_HEAD_INIT(NULL, 0)
     "_ordereddict.ordereddict",
     sizeof(PyOrderedDictObject),
     0,
@@ -3522,7 +3522,7 @@ PyDoc_STRVAR(sorteddict_doc,
 
 
 PyTypeObject PySortedDict_Type = {
-    PyVarObject_HEAD_INIT(NULL, 0)    
+    PyVarObject_HEAD_INIT(NULL, 0)
     "_ordereddict.sorteddict",
     sizeof(PySortedDictObject),
     0,
@@ -3687,7 +3687,7 @@ fail:
 }
 
 PyTypeObject PyOrderedDictIterKey_Type = {
-    PyVarObject_HEAD_INIT(NULL, 0)    
+    PyVarObject_HEAD_INIT(NULL, 0)
     "_ordereddict.keyiterator",		/* tp_name */
     sizeof(ordereddictiterobject),			/* tp_basicsize */
     0,					/* tp_itemsize */
@@ -3754,7 +3754,7 @@ fail:
 }
 
 PyTypeObject PyOrderedDictIterValue_Type = {
-    PyVarObject_HEAD_INIT(NULL, 0)    
+    PyVarObject_HEAD_INIT(NULL, 0)
     "_ordereddict.valueiterator",		/* tp_name */
     sizeof(ordereddictiterobject),			/* tp_basicsize */
     0,					/* tp_itemsize */
@@ -3838,7 +3838,7 @@ fail:
 }
 
 PyTypeObject PyOrderedDictIterItem_Type = {
-    PyVarObject_HEAD_INIT(NULL, 0)    
+    PyVarObject_HEAD_INIT(NULL, 0)
     "_ordereddict.itemiterator",		/* tp_name */
     sizeof(ordereddictiterobject),			/* tp_basicsize */
     0,					/* tp_itemsize */

@@ -80,8 +80,8 @@ https://bitbucket.org/ruamel/ordereddict is ordereddict's home on the web.
 
 Clone the repository there if you want to work from the source.
 
-http://www.xs4all.nl/~anthon/Python/ordereddict used to be 
-ordereddict's home on the web.  
+http://www.xs4all.nl/~anthon/Python/ordereddict used to be
+ordereddict's home on the web.
 There you can still find the links for downloading the older version (0.4.5).
 
 
@@ -339,7 +339,7 @@ order of key-value pairs so that comparing files is difficult with
 Older versions
 --------------
 
-http://www.xs4all.nl/~anthon/Python/ordereddict used to be 
+http://www.xs4all.nl/~anthon/Python/ordereddict used to be
 ordereddict's home on the web.
 
 There you can still find the links for downloading the older version (0.4.5).
@@ -349,7 +349,7 @@ History
 -------
 l ``0.4.9  2015-08-10``
 | typos fixed by Gianfranco Costamagna
-| 
+|
 | ``0.4.8  2015-05-31``
 | dependent on ruamel.base
 | version number in a single place

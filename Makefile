@@ -29,4 +29,4 @@ rmbookmarks:
 	rm  -rf .hg/git* .hg/bookmarks*
 
 github:
-	hg push git+ssh://git@github.com:ruamel/ordereddict.git 
+	hg push git+ssh://git@github.com:ruamel/ordereddict.git

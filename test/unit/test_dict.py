@@ -128,7 +128,7 @@ class DictTest(unittest.TestCase):
         d.update(ordereddict([(1,100)]))
         d.update(ordereddict([(2,20)]))
         d.update(ordereddict([(1,1),(2,2),(3,3)]))
-        # AvdN: should this fail 
+        # AvdN: should this fail
         self.assertEqual(d, {1:1, 2:2, 3:3})
 
         d.update()
